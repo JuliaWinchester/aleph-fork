@@ -1,0 +1,1 @@
+var DisplayMode,Orientation;!function(a){a.SLICES="slices",a.VOLUME="volume",a.MESH="mesh"}(DisplayMode||(DisplayMode={})),function(a){a.CORONAL="coronal",a.SAGGITAL="saggital",a.AXIAL="axial"}(Orientation||(Orientation={}));export{DisplayMode as a,Orientation as b};

@@ -1,0 +1,26 @@
+import { ActionTypes } from "./actions";
+import { DisplayMode } from "../enums/DisplayMode";
+import { Orientation } from "../enums/Orientation";
+import { AlAppState, AlNode, AlEdge, AlAngle } from "../interfaces";
+export declare const getInitialState: () => {
+    angles: Map<string, AlAngle>;
+    boundingBoxEnabled: boolean;
+    camera: any;
+    controlsEnabled: boolean;
+    displayMode: DisplayMode;
+    edges: Map<string, AlEdge>;
+    nodes: Map<string, AlNode>;
+    graphEnabled: boolean;
+    orientation: Orientation;
+    selected: any;
+    slicesIndex: number;
+    slicesWindowCenter: number;
+    slicesWindowWidth: number;
+    src: any;
+    srcLoaded: boolean;
+    volumeSteps: number;
+    volumeWindowCenter: number;
+    volumeWindowWidth: number;
+};
+export declare const app: (state: AlAppState, action: ActionTypes) => AlAppState;
+export declare const rootReducer: any;

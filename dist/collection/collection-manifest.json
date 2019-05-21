@@ -1,0 +1,538 @@
+{
+  "components": [
+    {
+      "tag": "al-angle-editor",
+      "dependencies": [],
+      "componentClass": "AlAngleEditor",
+      "componentPath": "components/al-angle-editor/al-angle-editor.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-angle-editor/al-angle-editor.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "angle",
+          "mutable": true,
+          "attr": "angle"
+        }
+      ],
+      "events": [
+        {
+          "event": "delete"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "al-console",
+      "dependencies": [],
+      "componentClass": "AlConsole",
+      "componentPath": "components/al-console/al-console.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-console/al-console.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "cmd",
+          "type": "String",
+          "mutable": true,
+          "attr": "cmd"
+        }
+      ],
+      "events": [
+        {
+          "event": "command"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "al-control-panel",
+      "dependencies": [],
+      "componentClass": "AlControlPanel",
+      "componentPath": "components/al-control-panel/al-control-panel.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-control-panel/al-control-panel.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "boundingBoxEnabled",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "bounding-box-enabled"
+        },
+        {
+          "name": "displayMode",
+          "type": "String",
+          "mutable": true,
+          "attr": "display-mode"
+        },
+        {
+          "name": "graphEnabled",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "graph-enabled"
+        },
+        {
+          "name": "orientation",
+          "type": "String",
+          "mutable": true,
+          "attr": "orientation"
+        },
+        {
+          "name": "slicesIndex",
+          "type": "Number",
+          "mutable": true,
+          "attr": "slices-index"
+        },
+        {
+          "name": "slicesWindowCenter",
+          "type": "Number",
+          "mutable": true,
+          "attr": "slices-window-center"
+        },
+        {
+          "name": "slicesWindowWidth",
+          "type": "Number",
+          "mutable": true,
+          "attr": "slices-window-width"
+        },
+        {
+          "name": "stackhelper",
+          "mutable": true,
+          "attr": "stackhelper",
+          "watch": [
+            "watchStackhelper"
+          ]
+        },
+        {
+          "name": "volumeSteps",
+          "type": "Number",
+          "mutable": true,
+          "attr": "volume-steps"
+        },
+        {
+          "name": "volumeWindowCenter",
+          "type": "Number",
+          "mutable": true,
+          "attr": "volume-window-center"
+        },
+        {
+          "name": "volumeWindowWidth",
+          "type": "Number",
+          "mutable": true,
+          "attr": "volume-window-width"
+        }
+      ],
+      "events": [
+        {
+          "event": "boundingBoxEnabledChanged"
+        },
+        {
+          "event": "displayModeChanged"
+        },
+        {
+          "event": "graphEnabledChanged"
+        },
+        {
+          "event": "orientationChanged"
+        },
+        {
+          "event": "slicesIndexChanged"
+        },
+        {
+          "event": "slicesWindowCenterChanged"
+        },
+        {
+          "event": "slicesWindowWidthChanged"
+        },
+        {
+          "event": "volumeStepsChanged"
+        },
+        {
+          "event": "volumeWindowCenterChanged"
+        },
+        {
+          "event": "volumeWindowWidthChanged"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "al-edge-editor",
+      "dependencies": [],
+      "componentClass": "AlEdgeEditor",
+      "componentPath": "components/al-edge-editor/al-edge-editor.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-edge-editor/al-edge-editor.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "edge",
+          "mutable": true,
+          "attr": "edge"
+        }
+      ],
+      "events": [
+        {
+          "event": "delete"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "al-node-editor",
+      "dependencies": [],
+      "componentClass": "AlNodeEditor",
+      "componentPath": "components/al-node-editor/al-node-editor.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-node-editor/al-node-editor.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "node",
+          "mutable": true,
+          "attr": "node"
+        }
+      ],
+      "events": [
+        {
+          "event": "delete"
+        },
+        {
+          "event": "save"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "al-node-list",
+      "dependencies": [],
+      "componentClass": "AlNodeList",
+      "componentPath": "components/al-node-list/al-node-list.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-node-list/al-node-list.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "nodes",
+          "mutable": true,
+          "attr": "nodes"
+        },
+        {
+          "name": "selected",
+          "type": "String",
+          "mutable": true,
+          "attr": "selected"
+        }
+      ],
+      "events": [
+        {
+          "event": "selectedChanged"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "al-tabs",
+      "dependencies": [],
+      "componentClass": "Tabs",
+      "componentPath": "components/al-tabs/al-tabs.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-tabs/al-tabs.css"
+          ]
+        }
+      },
+      "states": [
+        {
+          "name": "selectedTab"
+        },
+        {
+          "name": "tabs"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "ionTabButtonClick",
+          "method": "onTabClicked",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "getSelected"
+        },
+        {
+          "name": "getTab"
+        },
+        {
+          "name": "select"
+        }
+      ],
+      "context": [
+        {
+          "name": "doc",
+          "id": "document"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "events": [
+        {
+          "event": "ionNavWillLoad"
+        },
+        {
+          "event": "ionTabsDidChange",
+          "bubbles": false
+        },
+        {
+          "event": "ionTabsWillChange",
+          "bubbles": false
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "al-url-picker",
+      "dependencies": [],
+      "componentClass": "AlUrlPicker",
+      "componentPath": "components/al-url-picker/al-url-picker.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/al-url-picker/al-url-picker.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "url",
+          "type": "String",
+          "mutable": true,
+          "attr": "url"
+        },
+        {
+          "name": "urls",
+          "mutable": true,
+          "attr": "urls"
+        }
+      ],
+      "events": [
+        {
+          "event": "urlChanged"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "uv-aleph",
+      "dependencies": [],
+      "componentClass": "Aleph",
+      "componentPath": "components/aleph/aleph.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/aleph/aleph.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "dracoDecoderPath",
+          "type": "String",
+          "attr": "draco-decoder-path"
+        },
+        {
+          "name": "height",
+          "type": "String",
+          "attr": "height"
+        },
+        {
+          "name": "width",
+          "type": "String",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "angles"
+        },
+        {
+          "name": "boundingBoxEnabled"
+        },
+        {
+          "name": "camera"
+        },
+        {
+          "name": "controlsEnabled"
+        },
+        {
+          "name": "displayMode"
+        },
+        {
+          "name": "edges"
+        },
+        {
+          "name": "graphEnabled"
+        },
+        {
+          "name": "nodes"
+        },
+        {
+          "name": "nodesVisible"
+        },
+        {
+          "name": "optionsEnabled"
+        },
+        {
+          "name": "optionsVisible"
+        },
+        {
+          "name": "orientation"
+        },
+        {
+          "name": "selected"
+        },
+        {
+          "name": "slicesIndex"
+        },
+        {
+          "name": "slicesWindowCenter"
+        },
+        {
+          "name": "slicesWindowWidth"
+        },
+        {
+          "name": "src"
+        },
+        {
+          "name": "srcLoaded"
+        },
+        {
+          "name": "volumeSteps"
+        },
+        {
+          "name": "volumeWindowCenter"
+        },
+        {
+          "name": "volumeWindowWidth"
+        }
+      ],
+      "methods": [
+        {
+          "name": "clearGraph"
+        },
+        {
+          "name": "deleteAngle"
+        },
+        {
+          "name": "deleteEdge"
+        },
+        {
+          "name": "deleteNode"
+        },
+        {
+          "name": "load"
+        },
+        {
+          "name": "resize"
+        },
+        {
+          "name": "selectNode"
+        },
+        {
+          "name": "setBoundingBoxEnabled"
+        },
+        {
+          "name": "setDisplayMode"
+        },
+        {
+          "name": "setEdge"
+        },
+        {
+          "name": "setGraph"
+        },
+        {
+          "name": "setGraphEnabled"
+        },
+        {
+          "name": "setNode"
+        },
+        {
+          "name": "setOrientation"
+        },
+        {
+          "name": "setSlicesIndex"
+        },
+        {
+          "name": "setSlicesWindowCenter"
+        },
+        {
+          "name": "setSlicesWindowWidth"
+        },
+        {
+          "name": "setVolumeSteps"
+        },
+        {
+          "name": "setVolumeWindowCenter"
+        },
+        {
+          "name": "setVolumeWindowWidth"
+        }
+      ],
+      "context": [
+        {
+          "name": "store",
+          "id": "store"
+        }
+      ],
+      "events": [
+        {
+          "event": "changed"
+        },
+        {
+          "event": "loaded"
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "name": "@stencil/redux",
+      "tags": []
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.18.0",
+    "typescriptVersion": "3.3.3"
+  },
+  "bundles": []
+}

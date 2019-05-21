@@ -1,0 +1,134 @@
+{
+  "tags": [
+    {
+      "label": "al-angle-editor",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "label": "al-console",
+      "description": "",
+      "attributes": [
+        {
+          "label": "cmd",
+          "description": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "al-control-panel",
+      "description": "",
+      "attributes": [
+        {
+          "label": "bounding-box-enabled",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "display-mode",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "graph-enabled",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "orientation",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "slices-index",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "slices-window-center",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "slices-window-width",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "volume-steps",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "volume-window-center",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "volume-window-width",
+          "description": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "al-edge-editor",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "label": "al-node-editor",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "label": "al-node-list",
+      "description": "",
+      "attributes": [
+        {
+          "label": "selected",
+          "description": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "al-tabs",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "label": "al-url-picker",
+      "description": "",
+      "attributes": [
+        {
+          "label": "url",
+          "description": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "uv-aleph",
+      "description": "",
+      "attributes": [
+        {
+          "label": "draco-decoder-path",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "height",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "width",
+          "description": "",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
